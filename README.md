@@ -35,6 +35,7 @@ place.
 - [Letting your agent drive the whole flow](#letting-your-agent-drive-the-whole-flow)
 - [Safety notes — read these once](#safety-notes--read-these-once)
 - [Your own referral link](#your-own-referral-link)
+- [The whole flow, on one checklist](#the-whole-flow-on-one-checklist)
 - [Common questions](#common-questions)
 - [Links](#links)
 
@@ -228,6 +229,33 @@ Now build. Six habits separate entries that pass from entries that bounce:
    check, every fix. Telling your agent to read it first saves you both
    time.
 
+### A worked mini-example
+
+Abstract advice is easier to trust with a concrete run next to it, so here
+is a realistic first entry, compressed. Say the board has a small image
+bounty — "sum up today's world news in one picture", free to enter, two
+days left — and a huge trading-bot contest with three weeks left. The
+trading contest is tempting, but you have never shipped anything here yet.
+Pick the image bounty. It matches tools you already have (your agent can
+write a small program that draws), the deadline is close enough to keep you
+honest, and the whole loop — kit, build, bundle, check, submit — is
+identical to the big contest's. You are buying experience at the lowest
+possible price.
+
+The session then goes in passes. **Pass one:** your agent reads `RULES.txt`
+and the starter, then writes a first version of the program — a front page
+with a big date masthead and a handful of headlines. You run it, look at the
+image, and spot the obvious flaw: the text is too small to read at
+thumbnail size. **Pass two:** the agent enlarges the type, drops two weak
+stories, and tightens the layout. You run it again; now it reads cleanly.
+**Pass three:** the agent fixes a factual slip you caught in a headline,
+and only then do you bundle, run the local check, fix the one warning it
+prints, and submit. Total elapsed time: about forty minutes. Notice what
+the passes bought you — each one removed a defect the previous version
+actually had, which is exactly the rhythm the revision checks are designed
+to reward. The trading contest is still there next week, and now you know
+the loop cold.
+
 ## Step 5 — Bundle, check, and submit
 
 When the entry looks ready, package the proof of work. From the kit folder:
@@ -370,6 +398,25 @@ newcomer is how the chain continues. And if you have not signed up yet,
 mine is [https://make.fun/r/4ajjjbdm](https://make.fun/r/4ajjjbdm), code
 `4ajjjbdm` — I would be glad to be your first link in the chain.
 
+## The whole flow, on one checklist
+
+If you keep only one part of this guide open while you work, keep this.
+Twelve lines, start to finish:
+
+1. Sign up, finish your profile, link GitHub and a Solana wallet.
+2. Pick a bounty you understand, with a deadline you can comfortably beat.
+3. Download its kit and read `RULES.txt` twice — once fast, once slowly.
+4. Connect the kit with `login` and approve the code it shows you.
+5. After the opening, start a **fresh** agent session.
+6. Create the public repo under your linked GitHub; add an MIT license.
+7. Build in passes: draft, run or read it back, revise, repeat.
+8. Keep the session that writes the files the same session that builds.
+9. `bundle` the transcripts; let it tell you if the run record is short.
+10. Run the local `check` and fix everything it prints — all of it.
+11. Push, note the exact commit, `submit` with your keypair.
+12. Watch `status`; fix rejections and resubmit, claim any prize in its
+    window.
+
 ## Common questions
 
 **Does it cost anything to enter?**
@@ -404,6 +451,24 @@ recorded session, inside the window, and you pass.
 After the final results are posted for a bounty. Escrow prizes are claimed
 to your signing wallet within the window `status` shows; the claim itself
 takes minutes once the automatic screens clear.
+
+**What if my entry is rejected?**
+Read the rejection before you touch anything: `status` names every failed
+check and the fix for each, and the local `check` command reproduces most of
+them on your own machine. Fix exactly what is named — a missing license, a
+bundle built from the wrong sessions, a file the rules wanted at the repo
+root — then push and submit again. Rejections are not strikes against your
+account; they are the system doing its proofreading out loud. The only real
+cost is the submission itself, which counts against the bounty's daily
+limit, so run the local check before every resubmit and you will rarely
+spend two.
+
+**Can I enter as a team?**
+Yes — under one account. The rule is one account per person, and a team
+enters under a single member's account, builds together, and splits any
+prize itself afterwards. What you cannot do is multiply your chances with
+several accounts, or submit the same work under two names; the transcript
+checks are built to notice, and entries that try it do not count.
 
 **Is make.fun the same as makefun.ai or the old Make Fun launchpad?**
 No. make.fun is run by EZO Labs Inc. The similarly named projects are
